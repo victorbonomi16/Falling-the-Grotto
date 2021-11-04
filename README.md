@@ -88,7 +88,7 @@ Começo do jogo, pode-se notar valdivino pronto para iniciar sua jornada.</p>
 <br>
 
 <h3><b><p align="left">GASOLINA </b></h3>
-Sistema de combustível para camionete. Cada vez que valdivino pisa no acelerador, um parte da gasolina é consumida. Para reabastecer pode-se encontrar galões espalhados pelo mapa.</p>
+Sistema de combustível para camionete. Cada vez que valdivino pisa no acelerador, um parte da gasolina é consumida. Para reabastecer pode-se encontrar galões espalhados pelo mapa. Caso acabe a gasolina, o jogo reiniciará na tela do menu.</p>
 <p align="left"><img src="imggastrol.png" width="600"></p>
 
 
