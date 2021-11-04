@@ -192,7 +192,10 @@ A linguagem utilizada no projeto foi o C#(C Sharp), aplicada na plataforma de de
  
 
 </details>
+<br>
 
+&#x1F4D6;<i>"15 anos a trás, a internet era uma maneira de fugir do mundo real, hoje o mundo real é uma maneira de fugir da internet".<br> 
+by: John </i> 
 
 
 
