@@ -75,7 +75,7 @@ public class Menu : MonoBehaviour
     }
 }
 ```
-<summary><b>Codigo &#x2714;</b> </summary>
+<summary><b>Código &#x2714;</b> </summary>
 </details>
 <br><br>
 
@@ -138,7 +138,7 @@ public class gasoline : MonoBehaviour
 ```
 <br><br>
 <p align="center">
-<B>CÓDIGO DO GALAO</B>
+<B>CÓDIGO DO GALÃO</B>
 </p>
 
 ```C#
@@ -161,7 +161,7 @@ public class fuel : MonoBehaviour
 }
 ```
 
-<summary><b>Codigo &#x2714;</b> </summary>
+<summary><b>Código &#x2714;</b> </summary>
 </details>
 <br><br>
 <h3><b><p align="left">DIVISA ENTRE BIOMAS </b></h3>
