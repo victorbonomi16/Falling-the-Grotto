@@ -7,7 +7,7 @@
 
 <font face="Bahnschrift Condensed" size="7" color="#C1CDC1">
 <h2><b><p align="center">Falling the Grotto </b></h3>
-<hr size="4" width="800" color="#0E0B16">
+
 </p>
 </font>
 <h3><b><p align="left">SOBRE O PROJETO </b></h3>
