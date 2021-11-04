@@ -11,7 +11,7 @@
 </p>
 </font>
 <h3><b><p align="left">SOBRE O PROJETO </b></h3>
-Falling the Grotto se trata de um jogo 2D, desenvolvido na disciplina de jogos digitais na 3ª fase do curso técnico de informática SATC.</p>
+Falling the Grotto(Caindo na Grota) se trata de um jogo 2D, desenvolvido na disciplina de jogos digitais na 3ª fase do curso técnico de informática SATC.</p>
 
 <br>
 
@@ -168,6 +168,30 @@ public class fuel : MonoBehaviour
 Nessa parte ocorre a divisão entre o bioma do campo e do deserto.</p>
 <p align="left"><img src="imgmapa.png" width="600"></p>
 
+<hr size="4" width="100%" color="#0E0B16">
+<h3><b><p align="center">LINGUAGEM</p></b></h3>
+A linguagem utilizada no projeto foi o C#(C Sharp), aplicada na plataforma de desenvolvimento UNITY.
+<p align="center"><img src="imgsharp.png" width="100">
+</p>
+<hr size="4" width="100%" color="#0E0B16">
+
+<font face="Bahnschrift Condensed" size="5" color="#C1CDC1">
+<p align="left">
+&#x1F920; Olá, eu sou o Victor. 
+</p></font>
+<details>
+<summary> <b>Um pouco mais sobre mim... </b><i>(Aperta aí)</i> </summary>
+&#x1F4BB;Cursando Informática no Colégio Satc <br> 
+&#x1F4BB;Aluno do 3° ano E.M do Colégio Satc <br>
+&#x1F575;Futuro estagiário <br>
+&#x1F5FA;Cocal do Sul-SC	
+
+<br>
+
+&#x1F4F2;Me siga no [instagram](https://www.instagram.com/victor__bonomi/?hl=pt-br)!
+ 
+
+</details>
 
 
 
