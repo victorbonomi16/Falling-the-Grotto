@@ -6,8 +6,7 @@
 </p>
 
 <font face="Bahnschrift Condensed" size="7" color="#C1CDC1">
-<p align="center">
-Falling the Grotto
+<h2><b><p align="center">Falling the Grotto </b></h3>
 <hr size="4" width="800" color="#0E0B16">
 </p>
 </font>
@@ -24,6 +23,11 @@ O jogo tem por objetivo recolher três peças mecânicas (Suspensão, rodas e mo
 <br>
  
 <hr size="4" width="100%" color="#0E0B16">
+<h3><b><p align="center">PARTES A SEREM ENCONTRADAS</p></b></h3>
+<p align="center"><img src="imgmotor.png" width="100">
+<img src="imgsusp.png" width="100">
+<img src="imgwheels.png" width="100"></p>
+<hr size="4" width="100%" color="#0E0B16">
 
 <h3><b><p align="left">MENU </b></h3>
 Menu simples, com opções de Start Game e Quit Game.</p>
@@ -37,7 +41,7 @@ Menu simples, com opções de Start Game e Quit Game.</p>
 <p align="center">
 <B>CÓDIGO DO MENU</B>
 </p>
-<br>
+
 
 ```C#
 using System.Collections;
@@ -93,20 +97,19 @@ Sistema de combustível para camionete. Cada vez que valdivino pisa no acelerado
 <br>
 
 <p align="center">
-<B>CÓDIGO DO MENU</B>
+<B>CÓDIGO DA GASOLINA</B>
 </p>
-<br>
 
 ```C#
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class Menu : MonoBehaviour
+public class gasoline : MonoBehaviour
 {
-
+    public Image gasol;
     void Start()
     {
         
@@ -115,31 +118,58 @@ public class Menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetAxisRaw("Horizontal")>0)
+        {
+           gasol.fillAmount -= 0.0003000f; 
+        }
+
+        if (gasol.fillAmount <= 0f)
+        {
+            SceneManager.LoadScene("Menu");
+        }
+       
     }
 
-    public void StartGame()
+    public void AddFuel()
     {
-        SceneManager.LoadScene("JOGO");
-    }
-    public void QuitGame()
-    {
-        UnityEditor.EditorApplication.isPlaying = false;
-        //Application.Quit();
+        gasol.fillAmount += 0.9f;
     }
 }
 ```
+<br><br>
+<p align="center">
+<B>CÓDIGO DO GALAO</B>
+</p>
+
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class fuel : MonoBehaviour
+{
+    public gasoline gasol;
+     private void OnTriggerEnter2D(Collider2D collision)
+      {
+        if(collision.CompareTag("Player"))
+        {
+            gasol.AddFuel();
+            Destroy(gameObject);
+        }
+        
+    }
+}
+```
+
 <summary><b>Codigo &#x2714;</b> </summary>
 </details>
 <br><br>
+<h3><b><p align="left">DIVISA ENTRE BIOMAS </b></h3>
+Nessa parte ocorre a divisão entre o bioma do campo e do deserto.</p>
+<p align="left"><img src="imgmapa.png" width="600"></p>
 
 
 
-<h3><b><p align="center">PARTES A SEREM ENCONTRADAS</p></b></h3>
-<p align="center"><img src="imgmotor.png" width="100">
-<img src="imgsusp.png" width="100">
-<img src="imgwheels.png" width="100"></p>
-<hr size="4" width="100%" color="#0E0B16">
 
 
  
