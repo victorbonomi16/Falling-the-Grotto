@@ -85,7 +85,55 @@ public class Menu : MonoBehaviour
 Começo do jogo, pode-se notar valdivino pronto para iniciar sua jornada.</p>
 <p align="left"><img src="imginicial.png" width="600"></p>
 
+<br><br>
+<h3><b><p align="left">MOVIMENTAÇÃO DO VEÍCULO </b></h3>
+O carro é feito através das físicas 2D(no caso Rigidbody2D), onde é aplicado para cada uma das rodas e no chassi. São criadas variáveis de torque e velocidade para dar movimento ao veículo, que logo após serão introduzidas no Rigidbody da roda e do chassi.</p>
+<p align="left"><img src="imgcar.png" width="600"></p>
+
+
+<details>
+
 <br>
+
+<p align="center">
+<B>CÓDIGO DA MOVIMENTAÇÃO DO VEÍCULO</B>
+</p>
+
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CarMoviment : MonoBehaviour
+{
+    public Rigidbody2D carRig;
+    public Rigidbody2D backWheelRig;
+    public Rigidbody2D frontWheelRig;
+    
+    public float speed;
+    public float torque;
+
+    private float movement;
+    
+
+    void Update()
+    {
+        movement = Input.GetAxis("Horizontal"); 
+    }
+
+    private void FixedUpdate()
+    {
+        backWheelRig.AddTorque(-movement * speed * Time.fixedDeltaTime);
+        frontWheelRig.AddTorque(-movement * speed * Time.fixedDeltaTime);
+        carRig.AddTorque(-movement * torque * Time.fixedDeltaTime);
+    }
+}
+
+```
+
+<summary><b>Código &#x2714;</b> </summary>
+</details>
+<br><br>
 
 <h3><b><p align="left">GASOLINA </b></h3>
 Sistema de combustível para camionete. Cada vez que valdivino pisa no acelerador, um parte da gasolina é consumida. Para reabastecer pode-se encontrar galões espalhados pelo mapa. Caso acabe a gasolina, o jogo reiniciará na tela do menu.</p>
@@ -161,6 +209,75 @@ public class fuel : MonoBehaviour
 }
 ```
 
+<summary><b>Código &#x2714;</b> </summary>
+</details>
+<br><br>
+
+<h3><b><p align="left">PAUSE </b></h3>
+Pause simples, com opções de continuar ou voltar para o menu. Ao apertar no pause, o jogo congela instantaneamente para que não tenha problemas na gameplay.</p>
+<p align="left"><img src="imgpause.png" width="600"></p>
+
+
+<details>
+
+<br>
+
+<p align="center">
+<B>CÓDIGO DO PAUSE</B>
+</p>
+
+
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class PAUSE : MonoBehaviour
+{
+    private bool isPaused;
+    public GameObject pausePanel;
+    public string cena;
+    void Start()
+    {
+        Time.timeScale = 1f;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+       if (Input.GetKeyDown(KeyCode.Escape)) 
+       {
+           PauseScreen();
+       }
+    }
+
+    void PauseScreen()
+    {
+        if (isPaused)
+        {
+            isPaused = false;
+            Time.timeScale = 1f;
+            pausePanel.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            isPaused = true;
+            Time.timeScale = 0f;
+            pausePanel.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(cena);
+    }
+}
+```
 <summary><b>Código &#x2714;</b> </summary>
 </details>
 <br><br>
